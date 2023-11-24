@@ -2,9 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const notFoundMiddleware = require("./middleware/not-found");
-const stripe = require("stripe")(
-  "sk_test_51Lo6PUHWs13Ra00Lrz09bfvOJjaQOAmkCkPIdyzHfK8PjFUxkCx9YKJrNGHRU9yFVmsWWUcurHDy1bHaEuKm3GtU00fn861oGe"
-);
+const stripe = require("stripe")("key");
 const app = express();
 
 app.use(cors());
